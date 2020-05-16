@@ -1,0 +1,24 @@
+Copying tests/vm/pt-write-code2 into /tmp/7xs1zBcCQM.dsk...
+Copying ../../tests/vm/sample.txt into /tmp/7xs1zBcCQM.dsk...
+Writing command line to /tmp/07iVNZfwqW.dsk...
+qemu -hda /tmp/07iVNZfwqW.dsk -hdb /tmp/kiNXre_8HK.dsk -hdc /tmp/7xs1zBcCQM.dsk -hdd /tmp/CXr5Ed5TFH.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put pt-write-code2 put sample.txt run pt-write-code2
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+372 pages available in user pool.
+Calibrating timer...  209,510,400 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 100 sector (50 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'pt-write-code2' into the file system...
+Putting 'sample.txt' into the file system...
+Executing 'pt-write-code2':
+(pt-write-code2) begin
+(pt-write-code2) open "sample.txt"
+pt-write-code2: exit(-1)
+Execution of 'pt-write-code2' complete.
+
+TIMEOUT after 61 seconds of wall-clock time - load average: 0.49, 0.55, 0.39

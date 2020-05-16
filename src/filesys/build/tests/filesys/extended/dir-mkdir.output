@@ -1,0 +1,36 @@
+Copying tests/filesys/extended/dir-mkdir into /tmp/cpm7Ohf7S8.dsk...
+Copying tests/filesys/extended/tar into /tmp/cpm7Ohf7S8.dsk...
+Writing command line to /tmp/Io8Fyu_h19.dsk...
+qemu -hda /tmp/Io8Fyu_h19.dsk -hdb tmp.dsk -hdc /tmp/cpm7Ohf7S8.dsk -hdd /tmp/utvV8VrZi4.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put dir-mkdir put tar run dir-mkdir
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+372 pages available in user pool.
+Calibrating timer...  209,510,400 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 209 sector (104 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'dir-mkdir' into the file system...
+Putting 'tar' into the file system...
+Executing 'dir-mkdir':
+(dir-mkdir) begin
+(dir-mkdir) mkdir "a"
+(dir-mkdir) create "a/b"
+(dir-mkdir) chdir "a"
+(dir-mkdir) open "b"
+(dir-mkdir) end
+dir-mkdir: exit(0)
+Execution of 'dir-mkdir' complete.
+Timer: 147 ticks
+Thread: 30 idle ticks, 112 kernel ticks, 5 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 465 reads, 661 writes
+hd1:0: 209 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1045 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

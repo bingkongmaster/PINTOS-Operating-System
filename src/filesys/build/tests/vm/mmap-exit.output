@@ -1,0 +1,40 @@
+Copying tests/vm/mmap-exit into /tmp/iFwzb0j0WJ.dsk...
+Copying tests/vm/child-mm-wrt into /tmp/iFwzb0j0WJ.dsk...
+Writing command line to /tmp/ZEdnft6VD7.dsk...
+qemu -hda /tmp/ZEdnft6VD7.dsk -hdb /tmp/JSe4Apb5HM.dsk -hdc /tmp/iFwzb0j0WJ.dsk -hdd /tmp/Q7RaaKqbqU.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put mmap-exit put child-mm-wrt run mmap-exit
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+372 pages available in user pool.
+Calibrating timer...  209,510,400 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 199 sector (99 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'mmap-exit' into the file system...
+Putting 'child-mm-wrt' into the file system...
+Executing 'mmap-exit':
+(mmap-exit) begin
+(child-mm-wrt) begin
+(child-mm-wrt) create "sample.txt"
+(child-mm-wrt) open "sample.txt"
+(child-mm-wrt) mmap "sample.txt"
+(child-mm-wrt) end
+child-mm-wrt: exit(0)
+(mmap-exit) open "sample.txt" for verification
+(mmap-exit) size of sample.txt (4096) differs from expected (795)
+(mmap-exit) size of sample.txt (4096) differs from expected (795): FAILED
+mmap-exit: exit(1)
+Execution of 'mmap-exit' complete.
+Timer: 144 ticks
+Thread: 30 idle ticks, 103 kernel ticks, 11 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 476 reads, 608 writes
+hd1:0: 199 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1307 characters output
+Keyboard: 0 keys pressed
+Exception: 1 page faults
+Powering off...

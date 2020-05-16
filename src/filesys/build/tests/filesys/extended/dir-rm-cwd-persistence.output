@@ -1,0 +1,27 @@
+Writing command line to /tmp/KbfeSt_o_C.dsk...
+qemu -hda /tmp/KbfeSt_o_C.dsk -hdb tmp.dsk -hdc /tmp/vzZbCLfe6w.dsk -hdd /tmp/lAVwvD0wxG.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q run 'tar fs.tar /' get fs.tar
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+372 pages available in user pool.
+Calibrating timer...  209,510,400 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Boot complete.
+Executing 'tar fs.tar /':
+tar: exit(0)
+Execution of 'tar fs.tar /' complete.
+Getting 'fs.tar' from the file system...
+Timer: 257 ticks
+Thread: 30 idle ticks, 158 kernel ticks, 70 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 713 reads, 1226 writes
+hd1:0: 0 reads, 217 writes
+hd1:1: 0 reads, 0 writes
+Console: 845 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...
+Copying tests/filesys/extended/dir-rm-cwd.tar out of /tmp/vzZbCLfe6w.dsk...
